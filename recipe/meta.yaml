@@ -1,0 +1,41 @@
+package:
+    name: apr
+    version: 1.5.2
+source:
+    url: https://archive.apache.org/dist/apr/apr-1.5.2.tar.bz2
+    sha1: 6d757fcf7c687fc300c1066076f2e8380ff8cbc0
+
+build:
+    string: 6d757fcf7_0
+
+requirements:
+    build:
+        - expat
+        - clang           [osx]
+        - gcc             [linux]
+    host:
+        - expat
+    run:
+        - expat
+
+about:
+    description: 'Apache Portable Run-time libraries have been designed to provide
+        a common
+
+        interface to low level routines across any platform.The original goal of APR
+
+        was to combine all code in Apache to one common code base.
+
+        '
+    dev_url: https://svn.apache.org/viewvc/apr
+    doc_source_url: https://github.com/apache/apr/tree/trunk/docs
+    doc_url: https://apr.apache.org/docs/apr/1.6/index.html
+    home: http://apr.apache.org/
+    license: Apache License 2.0
+    license_family: Apache
+    summary: Maintains a consistent API with predictable behaviour
+extra:
+    copy_test_source_files: true
+    final: true
+    recipe-maintainers:
+        - nehaljwani
